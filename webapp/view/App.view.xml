@@ -7,6 +7,6 @@
   <Text text="Text control from XML view" />
 
   <Button
-    text="Show Hello World"
+    text="{i18n>showHelloButtonText}"
     press="onShowHello" />
 </mvc:View>
