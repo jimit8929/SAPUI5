@@ -1,0 +1,24 @@
+<mvc:View 
+
+  controllerName="ui5.quickstart.controller.HelloPanel"
+
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  >
+
+<Panel headerText="{i18n>homePagePanelHeader}">
+    <Button text="{i18n>showHelloButtonText}" 
+    press=".onShowHello" 
+    class="myCustomButton"/>
+
+    <Input value="{dataModel>/recipient/name}" 
+    description="Hello {dataModel>/recipient/name}" 
+    valueLiveUpdate="true" 
+    width="60%"/>
+
+    <FormattedText htmlText="Hello {dataModel>/recipient/name}" 
+    class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+</Panel>
+
+</mvc:View>

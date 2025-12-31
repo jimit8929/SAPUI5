@@ -3,10 +3,20 @@
   controllerName="ui5.quickstart.controller.App"
 
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
-  <Text text="Text control from XML view" />
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  >
 
-  <Button
-    text="{i18n>showHelloButtonText}"
-    press="onShowHello" />
+  <Shell>
+    <App class="myAppDemoWT">
+      <pages>
+        <Page title="{i18n>homePageTitle}">
+          <content>
+            <mvc:XMLView viewName="ui5.quickstart.view.HelloPanel"/> 
+          </content>
+        </Page>
+      </pages>
+    </App>
+  </Shell>
+
 </mvc:View>
