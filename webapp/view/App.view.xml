@@ -1,0 +1,12 @@
+<mvc:View 
+
+  controllerName="ui5.quickstart.controller.App"
+
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Text text="Text control from XML view" />
+
+  <Button
+    text="Show Hello World"
+    press="onShowHello" />
+</mvc:View>
