@@ -5,6 +5,11 @@
   <Dialog
   id="idHelloDialog"
   title="Hello {dataModel>/recipient/name}">
+    <content>
+      <core:Icon src="sap-icon://hello-world"
+      size="5rem" class="sapUiMediumMargin"
+      />
+    </content>
     <beginButton>
       <Button
          
