@@ -4,7 +4,7 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend("ui5.quickstart.controller.HelloPanel", {
-      onShowHello: function () {
+      onSayHelloButtonPress: function () {
         // alert("Hello World");
         const sText = this.getView()
           .getModel("i18n")
@@ -13,6 +13,17 @@ sap.ui.define(
 
         console.log(sText);
         MessageToast.show("Hello World From Message Toast");
+      },
+
+      async onOpenDialogButtonPress() {
+        //Create Dialog Lazily
+        this.oDialog ??= await this.loadFragment({
+          name: "ui5.quickstart.view.HelloDialog",
+        });
+        this.byId("idHelloDialog").open();
+      },
+      onCloseButtonPress() {
+        this.byId("idHelloDialog").close();
       },
     });
   }

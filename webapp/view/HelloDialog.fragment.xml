@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <Dialog
+  id="idHelloDialog"
+  title="Hello {dataModel>/recipient/name}">
+    <beginButton>
+      <Button
+         
+          text="{i18n>dialogCloseButtonText}"
+          press=".onCloseButtonPress"
+         
+      >
+          
+      </Button>
+    </beginButton>
+  </Dialog>
+  
+
+</core:FragmentDefinition>

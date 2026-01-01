@@ -8,8 +8,17 @@
   >
 
 <Panel headerText="{i18n>homePagePanelHeader}">
+    <content>
+      <Button 
+      id="idOpenDialogButton"
+      text="{i18n>openDialogButtonText}"
+      press=".onOpenDialogButtonPress"
+      class="sapUiSmallMarginEnd"
+      />
+
+
     <Button text="{i18n>showHelloButtonText}" 
-    press=".onShowHello" 
+    press=".onSayHelloButtonPress" 
     class="myCustomButton"/>
 
     <Input value="{dataModel>/recipient/name}" 
@@ -19,6 +28,7 @@
 
     <FormattedText htmlText="Hello {dataModel>/recipient/name}" 
     class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+    </content>
 </Panel>
 
 </mvc:View>
