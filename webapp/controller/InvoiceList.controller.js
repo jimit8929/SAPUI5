@@ -35,9 +35,14 @@ sap.ui.define(
       },
 
       //OnPress Controller for Lists
-      onObjectListItemPress() {
+      onObjectListItemPress(oEvent) {
+        const oItem = oEvent.getSource();
         const oRouter = this.getOwnerComponent().getRouter();
-        oRouter.navTo("detail");
+        oRouter.navTo("detail", {
+          invoicePath: window.encodeURIComponent(
+            oItem.getBindingContext("invoice").getPath().substring(1)
+          ),
+        });
       },
     });
   }

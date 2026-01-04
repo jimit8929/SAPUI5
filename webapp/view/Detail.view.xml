@@ -1,12 +1,17 @@
 <mvc:View
-	controllerName=""
+	controllerName="ui5.quickstart.controller.Detail"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	displayBlock="true"
 >
   <Page
-    title="{i18n>detailPageTitle}">
-    <ObjectHeader title="Invoice"/>
+    title="{i18n>detailPageTitle}"
+    showNavButton="true"
+    navButtonPress="onPageNavButtonPress"
+    >
+    <ObjectHeader title="{invoice>ProductName}"
+    intro="{invoice>ShipperName}"
+    />
   </Page>
 
 </mvc:View>
