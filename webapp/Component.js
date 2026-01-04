@@ -35,6 +35,9 @@ sap.ui.define(
           bundleName: "ui5.quickstart.i18n.i18n",
         });
         this.setModel(i18nModel, "i18n");
+
+        //Create the views based on the url
+        this.getRouter().initialize();
       },
     });
   }

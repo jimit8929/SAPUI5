@@ -16,5 +16,5 @@ server:
       mountPath: /V2
       configuration:
         baseUri: "https://services.odata.org"
-        path: /odata
+        path: /V2
         type: odata
