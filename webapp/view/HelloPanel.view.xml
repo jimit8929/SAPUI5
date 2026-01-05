@@ -1,35 +1,18 @@
-<mvc:View 
-
-  controllerName="ui5.quickstart.controller.HelloPanel"
-
+<mvc:View controllerName="ui5.quickstart.controller.HelloPanel"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc"
-  displayBlock="true"
-  >
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 
-<Panel headerText="{i18n>homePagePanelHeader}">
+  <Panel headerText="{i18n>homePagePanelHeader}">
     <content>
-      <Button 
-      id="idOpenDialogButton"
-      text="{i18n>openDialogButtonText}"
-      press=".onOpenDialogButtonPress"
-      class="sapUiSmallMarginEnd"
-      icon="sap-icon://hello-world"
-      />
+      <Button id="idOpenDialogButton" text="{i18n>openDialogButtonText}" press=".onOpenDialogButtonPress" class="sapUiSmallMarginEnd" icon="sap-icon://hello-world" />
 
 
-    <Button text="{i18n>showHelloButtonText}" 
-    press=".onSayHelloButtonPress" 
-    class="myCustomButton"/>
+      <Button text="{i18n>showHelloButtonText}" press=".onSayHelloButtonPress" class="myCustomButton"/>
 
-    <Input value="{dataModel>/recipient/name}" 
-    description="Hello {dataModel>/recipient/name}" 
-    valueLiveUpdate="true" 
-    width="60%"/>
+      <Input value="{dataModel>/recipient/name}" description="Hello {dataModel>/recipient/name}" valueLiveUpdate="true" width="60%"/>
 
-    <FormattedText htmlText="Hello {dataModel>/recipient/name}" 
-    class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+      <FormattedText htmlText="Hello {dataModel>/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
     </content>
-</Panel>
+  </Panel>
 
 </mvc:View>

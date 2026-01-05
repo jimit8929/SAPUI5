@@ -1,17 +1,14 @@
-<mvc:View
-	controllerName="ui5.quickstart.controller.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	displayBlock="true"
->
+<mvc:View controllerName="ui5.quickstart.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" displayBlock="true">
 
   <Page title="{i18n>homePageTitle}">
     <content>
       <mvc:XMLView viewName="ui5.quickstart.view.HelloPanel"/>
-       <mvc:XMLView viewName="ui5.quickstart.view.InvoiceList"/>
+      <mvc:XMLView viewName="ui5.quickstart.view.InvoiceList"/>
 
     </content>
-     
+
   </Page>
 
 </mvc:View>

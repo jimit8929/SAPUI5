@@ -1,57 +1,36 @@
-<mvc:View
-  controllerName="ui5.quickstart.controller.InvoiceList"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
+<mvc:View controllerName="ui5.quickstart.controller.InvoiceList"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
 
-  <List
-      headerText="{i18n>invoiceListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{
+  <List headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{
         path: 'invoice>/Invoices',
         sorter: {
           path: 'ProductName',
           group: true
         }
-      }"
-      id="idInvoicesList"
-  >
+      }" id="idInvoicesList">
     <headerToolbar>
       <Toolbar>
-        <Title
-          text="{i18n>invoiceListTitle}"
-        />
+        <Title text="{i18n>invoiceListTitle}" />
         <ToolbarSpacer/>
 
-        <SearchField
-          width="50%"
-          search=".onSearchFieldInvoicesSearch"
-        />
+        <SearchField width="50%" search=".onSearchFieldInvoicesSearch" />
       </Toolbar>
     </headerToolbar>
     <items>
-      <ObjectListItem
-        title="{invoice>Quantity} x {invoice>ProductName}"
-        number="{
+      <ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}" number="{
           parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
           type: 'sap.ui.model.type.Currency',
           formatOptions: {
             showMeasure: false
           }
-        }"
-        numberUnit="{view>/currency}"
-        numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
-        type="Navigation"
-        press="onObjectListItemPress"
-        >
-      
+        }" numberUnit="{view>/currency}" numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}" type="Navigation" press="onObjectListItemPress">
+
         <firstStatus>
-          <ObjectStatus
-             text="{path: 'invoice>Status', formatter: '.formatter.statusText'}"
-          />
+          <ObjectStatus text="{path: 'invoice>Status', formatter: '.formatter.statusText'}" />
         </firstStatus>
       </ObjectListItem>
     </items>
-      
+
   </List>
 </mvc:View>
